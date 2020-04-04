@@ -1,4 +1,0 @@
-# Using the RANGE function to generate list of decimal numbers
-abc = []
-for item in range(0,101,20):
-    abc.append(item/100)
