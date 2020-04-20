@@ -62,4 +62,9 @@ lisin<span class="token punctuation">[</span><span class="token number">0</span>
 </blockquote>
 <h4 id="but-remember">But Remember</h4>
 <p>Slicing from the list returns a list and not a value</p>
+<p>One of the ways to connect variable names to items in a list or tuple is as follows -</p>
+<pre class=" language-python"><code class="prism  language-python">x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span>
+x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span>
+<span class="token comment"># The above cases show a list and tuple where the variable name x,y,z are automatically linked to a,b,c</span>
+</code></pre>
 
