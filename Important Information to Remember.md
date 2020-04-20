@@ -32,4 +32,14 @@
 </code></pre>
 <h3 id="using-else-with-while-and-for-loops">Using Else with While and For loops</h3>
 <p>In case <code>while</code> and <code>for</code> loops run with a nested <code>break</code> command, the <strong>successful completion of the entire loop</strong> can be programmed to return a specific result with the <code>else</code> command nested under the same indent level as <code>while</code> and <code>for</code></p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+	<span class="token keyword">if</span> num <span class="token operator">%</span> <span class="token number">7</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+		<span class="token keyword">return</span> num
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+	<span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token string">"No number is divisible by 7"</span><span class="token punctuation">)</span>
+<span class="token comment"># The function for the above list will return the else </span>
+<span class="token comment"># output once the entire for loop is completed and </span>
+<span class="token comment"># break at the first instance if any number in </span>
+<span class="token comment"># the list is divisible by 7</span>
+</code></pre>
 
