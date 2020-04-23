@@ -107,6 +107,8 @@ d<span class="token punctuation">[</span><span class="token number">0</span><spa
 <span class="token comment"># Returns 'Heart'</span>
 </code></pre>
 <h3 id="ideally-the-init-should-not-return-any-list-tuple-or-dictionary-as-output.-it-can-only-print-strings-or-in-most-cases-return-is-not-coded-into-the-function-definition">Ideally the <strong>init</strong> should not return any list, tuple or dictionary as output. It can only print strings or in most cases, <code>return</code> is not coded into the function definition</h3>
+<p>Also, refer to the below distinction between <code>return</code> and <code>print</code>; <code>print</code> returns a nonetype object and hence, can be used in <code>__init__</code> code<br>
+<a href="https://stackoverflow.com/a/15441904/13218820">StackOverflow Link</a></p>
 <pre class=" language-python"><code class="prism  language-python">suits <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'Hearts'</span><span class="token punctuation">,</span> <span class="token string">'Diamonds'</span><span class="token punctuation">,</span> <span class="token string">'Spades'</span><span class="token punctuation">,</span> <span class="token string">'Clubs'</span><span class="token punctuation">)</span>
 ranks <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'Two'</span><span class="token punctuation">,</span> <span class="token string">'Three'</span><span class="token punctuation">,</span> <span class="token string">'Four'</span><span class="token punctuation">,</span> <span class="token string">'Five'</span><span class="token punctuation">,</span> <span class="token string">'Six'</span><span class="token punctuation">,</span> <span class="token string">'Seven'</span><span class="token punctuation">,</span> <span class="token string">'Eight'</span><span class="token punctuation">,</span> <span class="token string">'Nine'</span><span class="token punctuation">,</span> <span class="token string">'Ten'</span><span class="token punctuation">,</span> <span class="token string">'Jack'</span><span class="token punctuation">,</span> <span class="token string">'Queen'</span><span class="token punctuation">,</span> <span class="token string">'King'</span><span class="token punctuation">,</span> <span class="token string">'Ace'</span><span class="token punctuation">)</span>
 
@@ -177,10 +179,23 @@ TypeError<span class="token punctuation">:</span> __init__<span class="token pun
 <h3 id="difference-between-return-and-print">Difference between Return and Print</h3>
 <p>For <code>__str__</code> function in the class object definition, always use <code>return</code> function. The print function generates the output but, the same is an object of <strong>nonetype</strong> and <code>__str__</code> function will not be able to work with other functions.<br>
 <a href="https://stackoverflow.com/a/15441904/13218820">StackOverflow Link</a></p>
+<h3 id="the-__init__-command-statement-is-expected-to-return-an-object-of-nonetype">The <code>__init__</code> command statement is expected to return an object of nonetype</h3>
 <h3 id="print-command-format-for-printing-all-items-in-the-list">Print Command format for printing all items in the list</h3>
 <p>Refer to the Blackjack Example</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'general text string'</span><span class="token punctuation">,</span> <span class="token operator">*</span>player<span class="token punctuation">.</span>cards<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
 <span class="token comment"># general text sting can also be omitted</span>
 <span class="token comment"># this print input format does not work with return command</span>
 </code></pre>
+<h1 id="my-section-guidelines-for-writing-codes">My section guidelines for writing Codes</h1>
+<p><strong>Section 1</strong><br>
+Contains all the packages and modules imported into the overall code<br>
+<strong>Section 2</strong><br>
+Contains all the global variables<br>
+<strong>Section 3</strong><br>
+Contains all the custom Class Object definitions<br>
+<strong>Section 4</strong><br>
+Contains all the user-specific function definitions<br>
+<strong>Section 5</strong><br>
+Contains the final execution code</p>
+<h5 id="always-use-the--comments-to-indicate-the-reason-for-defining-an-object-function-and-broad-sections-at-different-points-of-the-code-dont-forget-to-outline-the-logic-for-defining-the-user-specific-functions-within-doc-string">Always use the # comments to indicate the reason for defining an object, function and broad sections at different points of the code; dont forget to outline the logic for defining the user-specific functions within doc-string</h5>
 
