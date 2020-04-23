@@ -174,4 +174,13 @@ TypeError<span class="token punctuation">:</span> __init__<span class="token pun
                 <span class="token keyword">break</span>
 <span class="token comment"># Refer Blackjack assignment on Udemy Course</span>
 </code></pre>
+<h3 id="difference-between-return-and-print">Difference between Return and Print</h3>
+<p>For <code>__str__</code> function in the class object definition, always use <code>return</code> function. The print function generates the output but, the same is an object of <strong>nonetype</strong> and <code>__str__</code> function will not be able to work with other functions.<br>
+<a href="https://stackoverflow.com/a/15441904/13218820">StackOverflow Link</a></p>
+<h3 id="print-command-format-for-printing-all-items-in-the-list">Print Command format for printing all items in the list</h3>
+<p>Refer to the Blackjack Example</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'general text string'</span><span class="token punctuation">,</span> <span class="token operator">*</span>player<span class="token punctuation">.</span>cards<span class="token punctuation">,</span> sep <span class="token operator">=</span> <span class="token string">'\n'</span><span class="token punctuation">)</span>
+<span class="token comment"># general text sting can also be omitted</span>
+<span class="token comment"># this print input format does not work with return command</span>
+</code></pre>
 
