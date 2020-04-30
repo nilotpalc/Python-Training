@@ -6,6 +6,7 @@
 <h2 id="anaconda-installation">Anaconda Installation</h2>
 <p>Run the anaconda package and ensure <strong>add to PATH</strong> is selected during the installation process<br>
 Do not install anything else for now</p>
+<p>Practice using JupyterLab</p>
 <h2 id="atom-ide-installation">Atom IDE Installation</h2>
 <ol>
 <li>Install <em>ATOM</em></li>
