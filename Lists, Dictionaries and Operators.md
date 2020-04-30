@@ -32,10 +32,10 @@ d<span class="token operator">=</span><span class="token punctuation">{</span><s
 </code></pre>
 <h1 id="solving-the-same-problem-with-different-code-solutions">Solving the same problem with different code solutions</h1>
 <p><a href="https://gist.github.com/nilotpalc/0b1c7285292e479d809415626e0c2595">https://gist.github.com/nilotpalc/0b1c7285292e479d809415626e0c2595</a></p>
-<p>We can add elements to a dictionary using <code>dict['keyname]=value</code> . The value can be an integer or a string.<br>
+<p>We can add elements to a dictionary using <code>dict['keyname]=value</code> . The value can be an integer or a string or a list or a tuple or any custom-defined class object.<br>
 We can delete items from a dictionary using <code>dict.pop(keyname)</code> . This removes the key-value logic from the dictionary.<br>
 <a href="https://thispointer.com/different-ways-to-remove-a-key-from-dictionary-in-python/">Info Link on .pop()</a></p>
-<p>Indexing any item from a list or a tuple returns an output which is a single value or a one-item list. If we need to use the same, it will need to be converted into a list using the <code>list(outputvariable)</code> function. Also, the <code>list</code> function cannot reference multiple arguments but can only take a single input which could be a value or variable (preferably variable when using to define functions).</p>
+<p>Indexing any item from a list or a tuple returns an output which is a single value. If we need to use the same as a list or tuple, it will need to be converted into a list using the <code>list(outputvariable)</code> function. Also, the <code>list</code> function cannot reference multiple arguments but can only take a single input which could be a value or variable (preferably variable when using to define functions).</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token comment"># Input</span>
 lisin <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
 lisin<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> 
@@ -62,9 +62,13 @@ lisin<span class="token punctuation">[</span><span class="token number">0</span>
 </blockquote>
 <h4 id="but-remember">But Remember</h4>
 <p>Slicing from the list returns a list and not a value</p>
+<h2 id="list-and-tuple-unpacking--assignment">List and Tuple Unpacking / Assignment</h2>
 <p>One of the ways to connect variable names to items in a list or tuple is as follows -</p>
 <pre class=" language-python"><code class="prism  language-python">x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">]</span>
 x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span><span class="token string">'b'</span><span class="token punctuation">,</span><span class="token string">'c'</span><span class="token punctuation">)</span>
+x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> num1<span class="token punctuation">,</span>num2<span class="token punctuation">,</span>num3
+x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z <span class="token operator">=</span> z<span class="token punctuation">,</span>y<span class="token punctuation">,</span>x<span class="token operator">+</span>z <span class="token comment"># logic can be used for reassigning variable values simultaneously especially during function definition</span>
 <span class="token comment"># The above cases show a list and tuple where the variable name x,y,z are automatically linked to a,b,c</span>
 </code></pre>
+<p><a href="https://cocalc.com/projects/efbf0d45-ab2f-471a-963e-9813a1544d2f/files/LisT_Tuple_Variable_Assignment.ipynb?anonymous=jupyter&amp;session=default">File link</a> on Cocalc</p>
 
