@@ -188,6 +188,28 @@ TypeError<span class="token punctuation">:</span> __init__<span class="token pun
 </code></pre>
 <h2 id="remember-the-section-on-listtuple-assignment-for-function-assignment-for-multiple-variables-in-functions">Remember the section on List/Tuple Assignment for function assignment for multiple variables in functions</h2>
 <p><a href="https://github.com/nilotpalc/Python-Training/blob/master/List_Tuple_Variable_Assignment.ipynb">Code Snippet</a> on Github</p>
+<h2 id="widgets">Widgets</h2>
+<p>Use interact as a decorator in the code</p>
+<pre class=" language-python"><code class="prism  language-python">@interact<span class="token punctuation">(</span>a<span class="token operator">=</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">,</span><span class="token builtin">max</span><span class="token punctuation">,</span>step<span class="token operator">/</span>defaultvalue<span class="token punctuation">)</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">,</span><span class="token builtin">max</span><span class="token punctuation">,</span>step<span class="token operator">/</span>defaultvalue<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># this can be extended to more variables</span>
+
+<span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token comment"># Code for using a and b</span>
+	<span class="token keyword">return</span> `value`
+</code></pre>
+<p>For <code>interact</code> widget command, the following table gives an overview of different widget abbreviations:</p>
+<table class="table table-condensed table-bordered">
+  <tbody><tr><td><strong>Keyword argument</strong></td><td><strong>Widget</strong></td></tr>  
+  <tr><td>`True` or `False`</td><td>Checkbox</td></tr>  
+  <tr><td>`'Hi there'`</td><td>Text</td></tr>
+  <tr><td>`value` or `(min,max)` or `(min,max,step)` if integers are passed</td><td>IntSlider</td></tr>
+  <tr><td>`value` or `(min,max)` or `(min,max,step)` if floats are passed</td><td>FloatSlider</td></tr>
+  <tr><td>`['orange','apple']` or `{'one':1,'two':2}`</td><td>Dropdown</td></tr>
+</tbody></table>
+<p>Widgets can also be defined separately using the method below (refer to the notes under Bootcamp Github)</p>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> ipywidgets <span class="token keyword">as</span> widgets
+a <span class="token operator">=</span> widgets<span class="token punctuation">.</span>IntSlider<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># the widget name can be different</span>
+</code></pre>
 <h1 id="my-section-guidelines-for-writing-codes">My section guidelines for writing Codes</h1>
 <p><strong>Section 1</strong><br>
 Contains all the packages and modules imported into the overall code<br>
