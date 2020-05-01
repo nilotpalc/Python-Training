@@ -32,4 +32,21 @@ Good <a href="https://www.accelebrate.com/blog/using-defaultdict-python"></a></p
 <h3 id="namedtuple">namedtuple</h3>
 <p>Each kind of <code>namedtuple</code> is represented by its own class, created by using the namedtuple() factory function. The arguments are the name of the new class and a string containing the names of the elements.<br>
 You can basically think of <code>namedtuple</code> as a very quick way of creating a new object/class type with some attribute fields.</p>
+<h2 id="datetime-module">DateTime module</h2>
+<blockquote>
+<p>import datetime</p>
+</blockquote>
+<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> datetime
+<span class="token comment"># can go upto microseconds</span>
+t <span class="token operator">=</span> datetime<span class="token punctuation">.</span>time<span class="token punctuation">(</span>hh<span class="token punctuation">,</span>mm<span class="token punctuation">,</span>ss<span class="token punctuation">)</span>
+
+d <span class="token operator">=</span> datetime<span class="token punctuation">.</span>date<span class="token punctuation">(</span>yyyy<span class="token punctuation">,</span>mm<span class="token punctuation">,</span>d<span class="token punctuation">)</span>
+<span class="token comment"># code for generating today's date</span>
+today <span class="token operator">=</span> datetime<span class="token punctuation">.</span>date<span class="token punctuation">.</span>today<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment"># The difference in dates is always expressed in timedelta object</span>
+d3 <span class="token operator">=</span> d1 <span class="token operator">-</span> d2
+<span class="token comment"># The difference in days is expressed as below</span>
+d3<span class="token punctuation">.</span>days
+</code></pre>
 
