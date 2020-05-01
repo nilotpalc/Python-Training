@@ -3,7 +3,9 @@
 
 ---
 
-<p>Main Functions under Regular Expressions</p>
+<h1 id="main-functions-under-regular-expressions">Main Functions under Regular Expressions</h1>
+<p>These functions are primarily used in code statements for pattern recognition. Simple text search in a string of characters in a single line can be done using <code>find</code> <code>count</code> and <code>index</code>.<br>
+Multiple lines will need use of flags and will have to be then, used with these below functions.</p>
 <h2 id="search">search</h2>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> re 
 re<span class="token punctuation">.</span>search <span class="token punctuation">(</span>text<span class="token punctuation">,</span>phrase<span class="token punctuation">)</span> 
@@ -40,12 +42,15 @@ re<span class="token punctuation">.</span>findall <span class="token punctuation
 <span class="token comment"># the number of times the text occurs</span>
 </code></pre>
 <h2 id="finditer">finditer</h2>
-<p>Captures the position of the repeating text in a string and is a good support to <code>findall</code></p>
+<p>Captures the position of the repeating text in a string and is a good support to <code>findall</code><br>
+The actual list is developed using start() or end() methods to call all positions in the list.</p>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> re
 re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span>text<span class="token punctuation">,</span> phrase<span class="token punctuation">)</span>
 <span class="token comment"># this cannot be printed independently. It needs to be used through a list comprehension</span>
 <span class="token keyword">print</span> <span class="token punctuation">[</span>item<span class="token punctuation">.</span>start<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">for</span> item <span class="token keyword">in</span> re<span class="token punctuation">.</span>finditer<span class="token punctuation">(</span>text<span class="token punctuation">,</span>phrase<span class="token punctuation">)</span><span class="token punctuation">]</span>
 </code></pre>
+<p><strong>This only works on string patterns and not for lists</strong><br>
+<a href="https://gist.github.com/nilotpalc/65336cebe72e6c0e6efcdbc371da9c90">Gist link</a></p>
 <p><a href="https://www.tutorialspoint.com/How-do-we-use-re-finditer-method-in-Python-regular-expression">finditer doc</a><br>
 <a href="https://stackoverflow.com/a/16360404/13218820">stackflow_good_answer</a></p>
 <h2 id="repetition-patterns">Repetition Patterns</h2>
