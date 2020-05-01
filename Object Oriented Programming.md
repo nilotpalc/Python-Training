@@ -61,7 +61,9 @@ MyBaseClass<span class="token punctuation">.</span>__init__<span class="token pu
 
 self<span class="token punctuation">.</span>z <span class="token operator">=</span> z
 </code></pre>
-<p><a href="https://gist.github.com/nilotpalc/130ced35b548ab5a93151814435c86f4">Gisthub</a> Illustration</p>
+<p><a href="https://gist.github.com/nilotpalc/130ced35b548ab5a93151814435c86f4">Gist-Github</a> Illustration<br>
+In case BaseClass has defined default values for the input variables, ONLY THEN can they be omitted from <code>__init__</code> scope for DerivedClass<br>
+<a href="https://gist.github.com/nilotpalc/e3b6f8e9021a112c14355e33c7e7c45c">Gist-Github</a> Illustration</p>
 <h3 id="magic--dunder-functions">Magic / Dunder Functions</h3>
 <pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">__str__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
 	<span class="token keyword">return</span> <span class="token punctuation">(</span>value to be printed<span class="token punctuation">)</span> <span class="token comment"># Used to return a result that can be printed using print(variable) in the coding statement for this class object</span>
