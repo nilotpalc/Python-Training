@@ -186,6 +186,8 @@ TypeError<span class="token punctuation">:</span> __init__<span class="token pun
 <span class="token comment"># general text sting can also be omitted</span>
 <span class="token comment"># this print input format does not work with return command</span>
 </code></pre>
+<h2 id="remember-the-section-on-listtuple-assignment-for-function-assignment-for-multiple-variables-in-functions">Remember the section on List/Tuple Assignment for function assignment for multiple variables in functions</h2>
+<p><a href="https://github.com/nilotpalc/Python-Training/blob/master/List_Tuple_Variable_Assignment.ipynb">Code Snippet</a> on Github</p>
 <h1 id="my-section-guidelines-for-writing-codes">My section guidelines for writing Codes</h1>
 <p><strong>Section 1</strong><br>
 Contains all the packages and modules imported into the overall code<br>
