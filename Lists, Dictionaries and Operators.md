@@ -6,6 +6,13 @@
 <h5 id="formatting-tips-for-markdown-cells">Formatting Tips for Markdown Cells</h5>
 <p><a href="https://www.datacamp.com/community/tutorials/markdown-in-jupyter-notebook">https://www.datacamp.com/community/tutorials/markdown-in-jupyter-notebook</a><br>
 <a href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html#Embedded-code">https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html#Embedded-code</a></p>
+<h3 id="reverse-function-for-list-and-string">Reverse function for List and String</h3>
+<p>The <code>reverse()</code> function is applicable for lists only.</p>
+<pre class=" language-python"><code class="prism  language-python">listname<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>To reverse a string, we need to use the slicing functionality</p>
+<pre class=" language-python"><code class="prism  language-python">stringname<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+</code></pre>
 <h4 id="create-a-list-from-an-existing-list-by-division">Create a List from an Existing List by DIVISION</h4>
 <p>Generate a list using  <strong>FOR</strong>  and  <strong>Range</strong>  function<br>
 The below image also highlights the use of  <code>append</code>  code</p>
@@ -71,4 +78,5 @@ x<span class="token punctuation">,</span>y<span class="token punctuation">,</spa
 <span class="token comment"># The above cases show a list and tuple where the variable name x,y,z are automatically linked to a,b,c</span>
 </code></pre>
 <p><a href="https://cocalc.com/projects/efbf0d45-ab2f-471a-963e-9813a1544d2f/files/LisT_Tuple_Variable_Assignment.ipynb?anonymous=jupyter&amp;session=default">File link</a> on Cocalc</p>
+<p><a href="https://github.com/nilotpalc/Python-Training/blob/master/List_Tuple_Variable_Assignment.ipynb">CodeSnippet</a> on Github</p>
 
