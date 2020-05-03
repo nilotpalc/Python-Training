@@ -188,6 +188,12 @@ TypeError<span class="token punctuation">:</span> __init__<span class="token pun
 </code></pre>
 <h2 id="remember-the-section-on-listtuple-assignment-for-function-assignment-for-multiple-variables-in-functions">Remember the section on List/Tuple Assignment for function assignment for multiple variables in functions</h2>
 <p><a href="https://github.com/nilotpalc/Python-Training/blob/master/List_Tuple_Variable_Assignment.ipynb">Code Snippet</a> on Github</p>
+<h2 id="map-filter-and-lambda">Map, Filter and Lambda</h2>
+<p>These functions are very helpful if we need to apply the same transformation or action on every time in a list or tuple or set.<br>
+Gist Github <a href="https://gist.github.com/nilotpalc/7fe2258d58d2cfc8d436601ebf6d1a18">Link</a><br>
+Use of lambda in defaultdict <a href="https://www.accelebrate.com/blog/using-defaultdict-python">link</a></p>
+<pre class=" language-python"><code class="prism  language-python">var <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token keyword">lambda</span> <span class="token punctuation">:</span><span class="token string">'vanilla'</span><span class="token punctuation">)</span>
+</code></pre>
 <h2 id="widgets">Widgets</h2>
 <p>Use interact as a decorator in the code</p>
 <pre class=" language-python"><code class="prism  language-python">@interact<span class="token punctuation">(</span>a<span class="token operator">=</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">,</span><span class="token builtin">max</span><span class="token punctuation">,</span>step<span class="token operator">/</span>defaultvalue<span class="token punctuation">)</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">,</span><span class="token builtin">max</span><span class="token punctuation">,</span>step<span class="token operator">/</span>defaultvalue<span class="token punctuation">)</span><span class="token punctuation">)</span>
