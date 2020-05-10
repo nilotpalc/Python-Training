@@ -113,18 +113,18 @@ arrname <span class="token punctuation">[</span>arrname <span class="token opera
 </tr>
 <tr>
 <td>Array Sum</td>
-<td align="center"></td>
-<td align="right">arrnum.sum()</td>
+<td align="center">arrnum.sum()</td>
+<td align="right">np.sum(arrnum)</td>
 </tr>
 <tr>
 <td>Array Std</td>
-<td align="center"></td>
-<td align="right">arrnum.std()</td>
+<td align="center">arrnum.std()</td>
+<td align="right">np.std(arrnum)</td>
 </tr>
 <tr>
 <td>Array Column  Sum</td>
-<td align="center"></td>
-<td align="right">arrnum.sum(axis=0)</td>
+<td align="center">arrnum.sum(axis=0)</td>
+<td align="right"></td>
 </tr>
 </tbody>
 </table><pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
