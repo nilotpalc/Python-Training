@@ -111,6 +111,21 @@ arrname <span class="token punctuation">[</span>arrname <span class="token opera
 <td align="center">arr1 **2</td>
 <td align="right">np.add (arr1,arr2)</td>
 </tr>
+<tr>
+<td>Array Sum</td>
+<td align="center"></td>
+<td align="right">arrnum.sum()</td>
+</tr>
+<tr>
+<td>Array Std</td>
+<td align="center"></td>
+<td align="right">arrnum.std()</td>
+</tr>
+<tr>
+<td>Array Column  Sum</td>
+<td align="center"></td>
+<td align="right">arrnum.sum(axis=0)</td>
+</tr>
 </tbody>
 </table><pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
 np<span class="token punctuation">.</span>function<span class="token punctuation">(</span>array1<span class="token punctuation">,</span>array2<span class="token punctuation">)</span>
