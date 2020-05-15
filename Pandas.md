@@ -92,19 +92,64 @@ df<span class="token punctuation">.</span>set_index<span class="token punctuatio
 <span class="token comment"># this needs to be used with `inplace` to be permanent</span>
 df<span class="token punctuation">.</span>index<span class="token punctuation">.</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token comment"># adds a name to the existing index</span>
 </code></pre>
+<p>Also, check out the documentation that shows how to create multi-level index using <code>df.set_index method</code> <a href="https://pandas.pydata.org/pandas-docs/version/0.23.1/generated/pandas.DataFrame.set_index.html">link</a></p>
+<h3 id="returning-a-list-of-column-and-index-label-headers-for-a-dataframe">Returning a list of column and index label headers for a DataFrame</h3>
+<p>Use the following commands -</p>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>columns<span class="token punctuation">.</span>values<span class="token punctuation">.</span>tolist<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># returns a list of column headers</span>
+
+df<span class="token punctuation">.</span>index<span class="token punctuation">.</span>unique<span class="token punctuation">(</span>level <span class="token operator">=</span> <span class="token string">'name'</span><span class="token operator">/</span>integer<span class="token punctuation">)</span> <span class="token comment"># returns the list of index labels</span>
+<span class="token comment"># under the level; default is zero or the outer layer</span>
+<span class="token comment"># Providing a index name generates a list for that index label</span>
+</code></pre>
 <h3 id="conditional-selection">Conditional Selection</h3>
 <p>The method is similar to array indexing</p>
 <pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">[</span>df<span class="token punctuation">[</span>col<span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token string">'n'</span><span class="token punctuation">]</span> <span class="token comment"># generates the dataframe which omits all rows containing </span>
 <span class="token comment"># values &lt; 'n' under col label</span>
+
 df<span class="token punctuation">[</span><span class="token punctuation">(</span>df<span class="token punctuation">[</span>col1<span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token string">'n1'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token punctuation">(</span>df<span class="token punctuation">[</span>col2<span class="token punctuation">]</span><span class="token operator">&lt;</span><span class="token string">'n2'</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token comment"># generates the dataframe that meets both</span>
 <span class="token comment"># conditions</span>
 <span class="token comment"># Note that `and` and `or` use is replaced by `&amp;` and `|` use in DataFrames</span>
 </code></pre>
 <h3 id="multi-level-index-and-hierarchy">Multi-level Index and Hierarchy</h3>
 <p>Indexing multi-layer data frames</p>
-<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>xs<span class="token punctuation">(</span>row<span class="token operator">-</span>label<span class="token punctuation">,</span> level <span class="token operator">=</span> index label<span class="token punctuation">)</span>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>xs<span class="token punctuation">(</span>row<span class="token operator">-</span>label<span class="token punctuation">,</span> level <span class="token operator">=</span> row header<span class="token operator">/</span>position<span class="token punctuation">)</span>
 <span class="token comment"># generates sections of the data linked to row-level</span>
 <span class="token comment"># subsequent column level indexing happens as shared previously</span>
+
 df<span class="token punctuation">.</span>xs<span class="token punctuation">(</span>row<span class="token operator">-</span>label<span class="token punctuation">,</span> level <span class="token operator">=</span> index label<span class="token punctuation">)</span><span class="token punctuation">[</span>col<span class="token operator">-</span>name<span class="token punctuation">]</span>
 </code></pre>
+<p>Also, check out the documentation that helps to indicate how to use it for multiple levels and across columns <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.xs.html">here</a></p>
+<h3 id="missing-data">Missing Data</h3>
+<p>There are 2 main functions to identify and correct missing data</p>
+<ol>
+<li><code>dropna</code> method</li>
+<li><code>fillna</code> method</li>
+</ol>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># drops all rows with Nan value</span>
+
+df<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>axis <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment"># drops all columns with Nan value</span>
+
+df<span class="token punctuation">.</span>dropna<span class="token punctuation">(</span>thresh <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment"># drops all rows where the number</span>
+<span class="token comment"># of non Nan values is less than 2</span>
+</code></pre>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>fillna<span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">'input'</span><span class="token punctuation">)</span> <span class="token comment"># fills all Nan values in the </span>
+<span class="token comment"># dataframe with input value</span>
+
+df<span class="token punctuation">[</span>col<span class="token operator">-</span>label<span class="token punctuation">]</span><span class="token punctuation">.</span>fillna<span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">'input'</span><span class="token punctuation">)</span> <span class="token comment"># fills all Nan values in the </span>
+<span class="token comment"># column with input value</span>
+</code></pre>
+<h3 id="concatenate-dataframes">Concatenate DataFrames</h3>
+<p>This is the same as <code>append</code> in Power BI</p>
+<pre class=" language-python"><code class="prism  language-python">pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>df1<span class="token punctuation">,</span>df2<span class="token punctuation">,</span>df3<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="merge-and-join">Merge and Join</h3>
+<p>This are same as <code>merge</code> functionality in Power BI</p>
+<pre class=" language-python"><code class="prism  language-python">pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>df1<span class="token punctuation">,</span>df2<span class="token punctuation">,</span>how<span class="token operator">=</span><span class="token string">'inner'</span><span class="token punctuation">,</span>on<span class="token operator">=</span><span class="token string">'key'</span><span class="token punctuation">)</span> <span class="token comment"># common key</span>
+
+pd<span class="token punctuation">.</span>merge<span class="token punctuation">(</span>df1<span class="token punctuation">,</span>df2<span class="token punctuation">,</span>how<span class="token operator">=</span><span class="token string">'inner'</span><span class="token punctuation">,</span>on<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'key1'</span><span class="token punctuation">,</span><span class="token string">'key2'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># will join based </span>
+<span class="token comment"># on common combinations between key1 and key2</span>
+</code></pre>
+<p>More details on <code>join</code> available <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html">here</a><br>
+This works on the premise that the joining key is the <strong>index</strong> label between 2 dataframes or else, use <code>merge</code> (useful to use column labels)<br>
+In case of overlapping column labels, <code>lsuffix</code> and <code>rsuffix</code> need to be indicated.</p>
 
