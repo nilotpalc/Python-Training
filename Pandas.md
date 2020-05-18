@@ -152,4 +152,11 @@ pd<span class="token punctuation">.</span>merge<span class="token punctuation">(
 <p>More details on <code>join</code> available <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.join.html">here</a><br>
 This works on the premise that the joining key is the <strong>index</strong> label between 2 dataframes or else, use <code>merge</code> (useful to use column labels)<br>
 In case of overlapping column labels, <code>lsuffix</code> and <code>rsuffix</code> need to be indicated.</p>
+<h3 id="pandas-dataframes-operations-and-data-input-output">Pandas DataFrames Operations and Data Input-Output</h3>
+<p>Head</p>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>head <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># will show sample of the dataset </span>
+<span class="token comment"># with default 5 rows</span>
+</code></pre>
+<p>Refer to the link <a href="https://www.mindomo.com/mindmap/0a313fed6d2d4003abfd254e2fe3d963#">here</a></p>
+<p>Specific to HTML, the html link has table references built into the code. The <code>pd.read_html</code> creates a list object of the table references which can be called through the indexing method</p>
 
