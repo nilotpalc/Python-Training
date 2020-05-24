@@ -19,6 +19,7 @@ np<span class="token punctuation">.</span>linspace<span class="token punctuation
 
 np<span class="token punctuation">.</span>linspace <span class="token punctuation">(</span>start<span class="token punctuation">,</span>stop<span class="token punctuation">,</span>n<span class="token punctuation">,</span>dtype <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token comment"># generates an output of integer values only</span>
 </code></pre>
+<p><code>linspace</code> means linearly spaced</p>
 <p>Stackflow link to using dtype for integer <a href="https://stackoverflow.com/q/36064207/13218820">Link</a></p>
 <h3 id="using-random-function-to-generate-arrays-with-random-numbers">Using random function to generate arrays with random numbers</h3>
 <p>The below functions are defined under the module ‘random’ within ‘numpy’ package</p>
@@ -62,7 +63,7 @@ arrname <span class="token punctuation">[</span>arrname <span class="token opera
 </code></pre>
 <h3 id="broadcasting-an-array">Broadcasting an Array</h3>
 <p>This works within a 1D array</p>
-<pre class=" language-python"><code class="prism  language-python">arrname<span class="token punctuation">[</span>a<span class="token punctuation">,</span>b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">9</span> <span class="token comment"># this changes the current set of values indexed between a and b positions to be equal to 9; </span>
+<pre class=" language-python"><code class="prism  language-python">arrname<span class="token punctuation">[</span>a<span class="token punctuation">:</span>b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">9</span> <span class="token comment"># this changes the current set of values indexed between a and b positions to be equal to 9; </span>
 <span class="token comment"># the change is reflected permanently within arrname array</span>
 </code></pre>
 <h3 id="copying-an-array">Copying an Array</h3>
@@ -109,6 +110,21 @@ arrname <span class="token punctuation">[</span>arrname <span class="token opera
 <td>Power</td>
 <td align="center">arr1 **2</td>
 <td align="right">np.add (arr1,arr2)</td>
+</tr>
+<tr>
+<td>Array Sum</td>
+<td align="center">arrnum.sum()</td>
+<td align="right">np.sum(arrnum)</td>
+</tr>
+<tr>
+<td>Array Std</td>
+<td align="center">arrnum.std()</td>
+<td align="right">np.std(arrnum)</td>
+</tr>
+<tr>
+<td>Array Column  Sum</td>
+<td align="center">arrnum.sum(axis=0)</td>
+<td align="right"></td>
 </tr>
 </tbody>
 </table><pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
