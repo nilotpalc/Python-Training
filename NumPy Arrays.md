@@ -63,7 +63,7 @@ arrname <span class="token punctuation">[</span>arrname <span class="token opera
 </code></pre>
 <h3 id="broadcasting-an-array">Broadcasting an Array</h3>
 <p>This works within a 1D array</p>
-<pre class=" language-python"><code class="prism  language-python">arrname<span class="token punctuation">[</span>a<span class="token punctuation">,</span>b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">9</span> <span class="token comment"># this changes the current set of values indexed between a and b positions to be equal to 9; </span>
+<pre class=" language-python"><code class="prism  language-python">arrname<span class="token punctuation">[</span>a<span class="token punctuation">:</span>b<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">9</span> <span class="token comment"># this changes the current set of values indexed between a and b positions to be equal to 9; </span>
 <span class="token comment"># the change is reflected permanently within arrname array</span>
 </code></pre>
 <h3 id="copying-an-array">Copying an Array</h3>
