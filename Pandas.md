@@ -88,8 +88,12 @@ df<span class="token punctuation">.</span>drop<span class="token punctuation">(<
 </code></pre>
 <h3 id="reset-and-set-index">Reset and Set Index</h3>
 <pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>reset_index<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
 df<span class="token punctuation">.</span>set_index<span class="token punctuation">(</span><span class="token string">'colname'</span><span class="token punctuation">)</span> <span class="token comment"># make a column as an index and delete the existing index</span>
 <span class="token comment"># this needs to be used with `inplace` to be permanent</span>
+
+df<span class="token punctuation">.</span>set_index<span class="token punctuation">(</span><span class="token punctuation">[</span>Col1<span class="token punctuation">,</span>Col2<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># resulting df is a multi-level index</span>
+
 df<span class="token punctuation">.</span>index<span class="token punctuation">.</span>names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'name'</span><span class="token punctuation">]</span> <span class="token comment"># adds a name to the existing index</span>
 </code></pre>
 <p>Also, check out the documentation that shows how to create multi-level index using <code>df.set_index method</code> <a href="https://pandas.pydata.org/pandas-docs/version/0.23.1/generated/pandas.DataFrame.set_index.html">link</a></p>
@@ -137,6 +141,24 @@ df<span class="token punctuation">.</span>dropna<span class="token punctuation">
 
 df<span class="token punctuation">[</span>col<span class="token operator">-</span>label<span class="token punctuation">]</span><span class="token punctuation">.</span>fillna<span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">'input'</span><span class="token punctuation">)</span> <span class="token comment"># fills all Nan values in the </span>
 <span class="token comment"># column with input value</span>
+</code></pre>
+<h3 id="groupby">Groupby</h3>
+<p><em>Groupby</em> groups data based on the index header which is defined by the column name used for grouping</p>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token string">'ColNam'</span><span class="token punctuation">)</span> <span class="token comment"># the resulting df has ColNam as new index</span>
+
+df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span>Col1<span class="token punctuation">,</span>Col2<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># resulting df is multi-level index w/ </span>
+<span class="token comment"># Col1 and Col2</span>
+
+df<span class="token punctuation">.</span>groupby<span class="token punctuation">(</span><span class="token punctuation">[</span>Col1<span class="token punctuation">,</span>Col2<span class="token punctuation">]</span><span class="token punctuation">,</span> as_index<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token comment"># resulting df does not</span>
+<span class="token comment"># add col1 and col2 to index</span>
+</code></pre>
+<h4 id="aggregation-for-groupby-columns">Aggregation for Groupby Columns</h4>
+<pre class=" language-python"><code class="prism  language-python">groupdf<span class="token punctuation">.</span>agg <span class="token punctuation">(</span>np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">)</span> <span class="token comment"># runs on all columns</span>
+
+groupdf<span class="token punctuation">.</span>agg<span class="token punctuation">(</span>Col1<span class="token punctuation">:</span> np<span class="token punctuation">.</span><span class="token builtin">sum</span><span class="token punctuation">,</span> Col2<span class="token punctuation">:</span> np<span class="token punctuation">.</span>mean<span class="token punctuation">)</span> <span class="token comment"># new groupdf with 2 col</span>
+
+groupdf<span class="token punctuation">.</span>agg<span class="token punctuation">(</span><span class="token string">'NewCol'</span><span class="token operator">=</span><span class="token punctuation">(</span>Col1<span class="token punctuation">,</span>func<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token string">'NewCol2'</span><span class="token operator">=</span><span class="token punctuation">(</span>Col2<span class="token punctuation">,</span>func<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># generates new column names for agg. columns</span>
 </code></pre>
 <h3 id="concatenate-dataframes">Concatenate DataFrames</h3>
 <p>This is the same as <code>append</code> in Power BI</p>
