@@ -114,6 +114,10 @@ df<span class="token punctuation">[</span><span class="token punctuation">(</spa
 <span class="token comment"># conditions</span>
 <span class="token comment"># Note that `and` and `or` use is replaced by `&amp;` and `|` use in DataFrames</span>
 </code></pre>
+<h4 id="top-n-filter">Top N Filter</h4>
+<pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>nlargest<span class="token punctuation">(</span>N<span class="token punctuation">,</span>colnam<span class="token punctuation">)</span>
+</code></pre>
+<p>More details available <a href="https://pandas.pydata.org/pandas-docs/version/0.17.0/generated/pandas.DataFrame.nlargest.html">here</a></p>
 <h3 id="multi-level-index-and-hierarchy">Multi-level Index and Hierarchy</h3>
 <p>Indexing multi-layer data frames</p>
 <pre class=" language-python"><code class="prism  language-python">df<span class="token punctuation">.</span>xs<span class="token punctuation">(</span>row<span class="token operator">-</span>label<span class="token punctuation">,</span> level <span class="token operator">=</span> row header<span class="token operator">/</span>position<span class="token punctuation">)</span>
