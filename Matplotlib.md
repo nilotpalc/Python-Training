@@ -21,8 +21,8 @@ All the above are set between 0 and 1. Note that Left + Width, if exceeding 1 me
 Running the dataplots with specific legend requirements can be done using the `for` loop based on the legend column
 The example is available [here](https://gist.github.com/nilotpalc/3a440e56b54acbc4bed8e2c0760769b9)
 
-
+The input to various plots can be in the form of a list or array. Hence, we can either use inputs like 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY4ODQ2Nzk4XX0=
+eyJoaXN0b3J5IjpbMjg4ODEwMjAzLDU2ODg0Njc5OF19
 -->
