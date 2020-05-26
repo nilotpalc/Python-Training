@@ -25,11 +25,10 @@ The example is available [here](https://gist.github.com/nilotpalc/3a440e56b54acb
 > Hence, we can use commands like `df[col].unique()` to plot the x-axis
 > while using `df[col]` to plot the y-axis. Also, note we can also use
 > conditional selection to select the y-axis `df[df[col] > a][col3]`.
-> __Point to remember - The outcome of the dataframe indexing is an array
-> or series which can be directly used for plotting the data. Making the
-> x-axis column as index is useful but, note that multi-level__
+> __Point to remember - Use the independent columns for creating the plots. Focus on generating the complete dataframe through excel and use Python as a wrapper for plotting__
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTQ1NDgwNDYsLTI2MjM1NDY1MCwtMT
-E3MjIxNDMyNCw1Njg4NDY3OThdfQ==
+eyJoaXN0b3J5IjpbMTE0MTg5NDMyNiwtMjYyMzU0NjUwLC0xMT
+cyMjE0MzI0LDU2ODg0Njc5OF19
 -->
