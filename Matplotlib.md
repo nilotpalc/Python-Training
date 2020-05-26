@@ -21,10 +21,15 @@ All the above are set between 0 and 1. Note that Left + Width, if exceeding 1 me
 Running the dataplots with specific legend requirements can be done using the `for` loop based on the legend column
 The example is available [here](https://gist.github.com/nilotpalc/3a440e56b54acbc4bed8e2c0760769b9)
 
-The input to various plots can be in the form of a list or array. Hence, we can use commands like `df[col].unique()` to plot the x-axis while using `df[col]` to plot the y-axis. Also, note we can also use conditional selection to select the y-axis `df[df[col] > a][col3]`.
-Point to remember - The outcome of the dataframe indexing is an array or series which can be directly used for plotting the data. Making the x-axis column as index is useful but, note that multi-level 
+> The input to various plots can be in the form of a list or array.
+> Hence, we can use commands like `df[col].unique()` to plot the x-axis
+> while using `df[col]` to plot the y-axis. Also, note we can also use
+> conditional selection to select the y-axis `df[df[col] > a][col3]`.
+> __Point to remember - The outcome of the dataframe indexing is an array
+> or series which can be directly used for plotting the data. Making the
+> x-axis column as index is useful but, note that multi-level__
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MjM1NDY1MCwtMTE3MjIxNDMyNCw1Nj
-g4NDY3OThdfQ==
+eyJoaXN0b3J5IjpbLTE5NTQ1NDgwNDYsLTI2MjM1NDY1MCwtMT
+E3MjIxNDMyNCw1Njg4NDY3OThdfQ==
 -->
