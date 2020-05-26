@@ -22,8 +22,9 @@ Running the dataplots with specific legend requirements can be done using the `f
 The example is available [here](https://gist.github.com/nilotpalc/3a440e56b54acbc4bed8e2c0760769b9)
 
 The input to various plots can be in the form of a list or array. Hence, we can use commands like `df[col].unique()` to plot the x-axis while using `df[col]` to plot the y-axis. Also, note we can also use conditional selection to select the y-axis `df[df[col] > a][col3]`.
-Point to remember - The outcome of the dataframe indexing is an array or series which can be directly used for plotting the data. Making the x-axis column as index allows 
+Point to remember - The outcome of the dataframe indexing is an array or series which can be directly used for plotting the data. Making the x-axis column as index is useful but, note that multi-level 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzIyMTQzMjQsNTY4ODQ2Nzk4XX0=
+eyJoaXN0b3J5IjpbLTI2MjM1NDY1MCwtMTE3MjIxNDMyNCw1Nj
+g4NDY3OThdfQ==
 -->
