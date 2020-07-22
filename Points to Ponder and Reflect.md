@@ -63,4 +63,17 @@ dimensions. This problem of higher dimension is known as the Curse of Dimensiona
 <p><strong>Another important point to remember is that KNN is better used when the existence of a pattern of attributes leads to an outcome with the probability of close to 1.0 associated with one of the classification categories.</strong></p>
 <p><strong>Classification is best used with non-stochastic/deterministic outcomes that occur frequently, and not when two individuals with identical inputs can easily have different outcomes. For the latter, modeling tendencies (i.e., probabilities) is key.</strong></p>
 <p>A good read elaborating on classification and prediction (linked to logistic regression) is available <a href="https://www.fharrell.com/post/classification/">here</a></p>
+<h3 id="decision-trees-and-random-forests">Decision Trees and Random Forests</h3>
+<ol>
+<li>Data needs to be split based on attributes that can provide a clean split (Entropy and Information Gain math)</li>
+<li>Random Forest technique tries to use sample data containing <code>m</code> number of attributes against a total of <code>p</code> attributes to create a MECE decision tree<br>
+<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mo>=</mo><msqrt><mi>p</mi></msqrt></mrow><annotation encoding="application/x-tex">m = \sqrt{p}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 1.04em; vertical-align: -0.33694em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.70306em;"><span class="svg-align" style="top: -3em;"><span class="pstrut" style="height: 3em;"></span><span class="mord" style="padding-left: 0.833em;"><span class="mord mathdefault">p</span></span></span><span class="" style="top: -2.66306em;"><span class="pstrut" style="height: 3em;"></span><span class="hide-tail" style="min-width: 0.853em; height: 1.08em;"><svg width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
+-10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
+-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
+35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
+-221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
+s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
+s-65,47,-65,47z M834 80H400000v40H845z"></path></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.33694em;"><span class=""></span></span></span></span></span></span></span></span></span></li>
+</ol>
+<p><em>Random Forests are better equipped and assumed to be more accurate than Decision Trees</em></p>
 
